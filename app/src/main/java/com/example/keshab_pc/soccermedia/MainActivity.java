@@ -18,6 +18,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
+import com.vstechlab.easyfonts.EasyFonts;
 
 import net.dean.jraw.RedditClient;
 
@@ -110,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
             super(itemView);
             itemView.setOnClickListener(this);
             mTitleTextView = (TextView)itemView.findViewById(R.id.item_title);
+            mTitleTextView.setTypeface(EasyFonts.robotoRegular(getApplicationContext()));
             mImageView = (ImageView)itemView.findViewById(R.id.item_thumbnail);
         }
         public void bindData(Submission item, String thumbnail){
